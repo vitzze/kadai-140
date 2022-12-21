@@ -1,0 +1,25 @@
+@charset "utf-8:";
+
+@media screen and (max-width: 600px) {
+
+  .footer {
+    width: 100%;
+
+  .contact-wrapper {
+    width: 90%;
+    flex-direction: column;
+
+    .form-area {
+      flex-direction: column;
+    }
+
+    .text-area,
+    .form-area {
+      width: 100%;
+      flex-direction: column;
+     }
+  }
+ 
+}
+
+}
