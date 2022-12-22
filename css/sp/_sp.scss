@@ -1,6 +1,28 @@
 @charset "utf-8:";
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
+
+  #ham-navigation {
+    width: 100%;
+  }
+
+  #ham-navigation .navigation {
+
+    li {
+      width: 50%;
+      border-bottom: 1px solid #fff;
+  
+      &:first-child {
+        border-top: 1px solid #fff;
+      }
+  
+      a {
+        display: block;
+        padding: 25px 0;
+      }
+    }  
+  }
+  
 
   .footer {
     width: 100%;
@@ -9,15 +31,23 @@
     width: 90%;
     flex-direction: column;
 
-    .form-area {
-      flex-direction: column;
+    .form-area,
+    .text-area {
+      width: 100%;
     }
 
-    .text-area,
     .form-area {
-      width: 100%;
-      flex-direction: column;
-     }
+      margin-top: 50px;
+
+      .submit {
+        margin-top: 30px;
+        width: 100%;
+      }
+    }
+
+
+
+
   }
  
 }

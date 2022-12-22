@@ -18,19 +18,31 @@
   font-weight: bold;
 }
 
+// slickについて、liの中のimgに｛display：block｝として、
+// ｛max-width：　100％｝
+// paddingをかけると１枚ずつの左右余白設定できる。
+
 .slick-area {
   margin-top: 30px;
   visibility: hidden;
 
+  li img {
+    display: block;
+    max-width: 100%;
+    padding: 0 30px;
+  }
 
   &.slick-initialized {
     visibility: visible;
   }
 }
 
+//header（高さ85px）を固定しているので、featureのアンカーリンクに正しく飛ぶために{margin：-85ｐｘ｝｛padding：85px｝で、見た目は変わらないが、リンクが正しく飛ぶために調整している。
+  
 #feature {
   max-width: 1240px;
-  padding: 50px 16px 50px 16px;
+  margin-top: -85px;
+  padding: 85px 16px 50px 16px;
   margin: 0 auto;
 
   .item-wrapper {
@@ -54,6 +66,7 @@
         opacity: 0;
         width: 100%;
         aspect-ratio: 6/4;
+        object-fit: cover;
         transform: translateY(30px);
         transition: all 1s;
  

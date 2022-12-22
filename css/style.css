@@ -8,7 +8,7 @@ body {
 #header {
   font-size: 14px;
   width: 100%;
-  height: 100px;
+  height: 85px;
   background: #fff;
   position: fixed;
   z-index: 10;
@@ -141,13 +141,19 @@ body {
   margin-top: 30px;
   visibility: hidden;
 }
+.slick-area li img {
+  display: block;
+  max-width: 100%;
+  padding: 0 30px;
+}
 .slick-area.slick-initialized {
   visibility: visible;
 }
 
 #feature {
   max-width: 1240px;
-  padding: 50px 16px 50px 16px;
+  margin-top: -85px;
+  padding: 85px 16px 50px 16px;
   margin: 0 auto;
 }
 #feature .item-wrapper {
@@ -168,6 +174,8 @@ body {
   opacity: 0;
   width: 100%;
   aspect-ratio: 6/4;
+  -o-object-fit: cover;
+     object-fit: cover;
   transform: translateY(30px);
   transition: all 1s;
 }
@@ -206,6 +214,7 @@ body {
 .footer .contact-wrapper {
   max-width: 1240px;
   margin: 40px auto 0;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   color: #FFF;
@@ -219,26 +228,69 @@ body {
   margin-top: 50px;
 }
 .footer .contact-wrapper .form-area {
+  text-align: left;
+  width: 45%;
+}
+.footer .contact-wrapper .form-area dl {
   display: flex;
   flex-wrap: wrap;
-  width: 45%;
-  text-align: left;
 }
-.footer .contact-wrapper .form-area dt {
+.footer .contact-wrapper .form-area dl dt {
   width: 100%;
 }
-.footer .contact-wrapper .form-area dd {
+.footer .contact-wrapper .form-area dl dd {
+  margin-top: 5px;
   width: 100%;
 }
-.footer .contact-wrapper .form-area dd input,
-.footer .contact-wrapper .form-area dd textarea {
+.footer .contact-wrapper .form-area dl dd:nth-child(2), .footer .contact-wrapper .form-area dl dd:nth-child(4) {
+  margin-bottom: 20px;
+}
+.footer .contact-wrapper .form-area dl input {
+  height: 75%;
+}
+.footer .contact-wrapper .form-area dl textarea {
+  height: 200px;
+}
+.footer .contact-wrapper .form-area dl input,
+.footer .contact-wrapper .form-area dl textarea {
   width: 100%;
-  height: 90%;
+  padding: 10px;
+  color: #000;
   border: 1px solid #FFF;
   background: #FFF;
 }
+.footer .contact-wrapper .form-area .submit {
+  min-width: 200px;
+  margin-top: 50px;
+  padding: 15px 40px;
+  display: inline-block;
+  border: 1px solid #FFF;
+  cursor: pointer;
+  text-align: center;
+}
+.footer .copyright {
+  margin-top: 50px;
+  display: inline-block;
+  color: #FFF;
+  font-size: 12px;
+  text-align: center;
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
+  #ham-navigation {
+    width: 100%;
+  }
+  #ham-navigation .navigation li {
+    width: 50%;
+    border-bottom: 1px solid #fff;
+  }
+  #ham-navigation .navigation li:first-child {
+    border-top: 1px solid #fff;
+  }
+  #ham-navigation .navigation li a {
+    display: block;
+    padding: 25px 0;
+  }
   .footer {
     width: 100%;
   }
@@ -246,13 +298,16 @@ body {
     width: 90%;
     flex-direction: column;
   }
-  .footer .contact-wrapper .form-area {
-    flex-direction: column;
-  }
-  .footer .contact-wrapper .text-area,
-.footer .contact-wrapper .form-area {
+  .footer .contact-wrapper .form-area,
+.footer .contact-wrapper .text-area {
     width: 100%;
-    flex-direction: column;
+  }
+  .footer .contact-wrapper .form-area {
+    margin-top: 50px;
+  }
+  .footer .contact-wrapper .form-area .submit {
+    margin-top: 30px;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
